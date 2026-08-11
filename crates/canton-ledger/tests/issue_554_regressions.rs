@@ -14,3 +14,7 @@
 // LEDGER-01 — generated command IDs and full change-ID matching.
 #[path = "issue_554_regressions/ledger_01.rs"]
 mod ledger_01;
+
+// STREAM-01 — checkpoint update recovery.
+#[path = "issue_554_regressions/stream_01.rs"]
+mod stream_01;
