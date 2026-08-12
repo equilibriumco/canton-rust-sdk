@@ -3,12 +3,17 @@
 //! Run the complete suite with:
 //!
 //! ```text
-//! cargo test -p canton-ledger --test issue_554_regressions
+//! cargo test -p canton-ledger --all-features --test issue_554_regressions
 //! ```
 //!
 //! These tests state the behavior required to close each finding. They are
 //! intentionally expected to fail against the reviewed v0.1.4 release.
-#![allow(clippy::expect_used, clippy::panic, clippy::unwrap_used)]
+#![allow(
+    clippy::expect_used,
+    clippy::large_futures,
+    clippy::panic,
+    clippy::unwrap_used
+)]
 
 // Regression modules, kept in review order.
 // LEDGER-01 — generated command IDs and full change-ID matching.
@@ -26,3 +31,8 @@ mod stream_03;
 // OBS-01 — failures reported after a stream opens must remain observable.
 #[path = "issue_554_regressions/obs_01.rs"]
 mod obs_01;
+
+// OBS-02 — trace context propagation in the WebSocket handshake.
+#[cfg(all(feature = "ws", feature = "otel"))]
+#[path = "issue_554_regressions/obs_02.rs"]
+mod obs_02;

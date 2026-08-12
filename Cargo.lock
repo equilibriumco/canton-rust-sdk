@@ -209,6 +209,8 @@ dependencies = [
  "futures-core",
  "futures-util",
  "metrics-util",
+ "opentelemetry",
+ "opentelemetry_sdk",
  "prost-types",
  "rcgen",
  "reqwest",
@@ -224,6 +226,8 @@ dependencies = [
  "tonic-prost",
  "tonic-types",
  "tracing",
+ "tracing-opentelemetry",
+ "tracing-subscriber",
  "uuid",
 ]
 
