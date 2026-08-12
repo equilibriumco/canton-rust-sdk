@@ -55,6 +55,7 @@ canton-proto = { workspace = true, features = ["server"] }
 tokio-stream = { workspace = true, features = ["net"] }
 tonic-types  = { workspace = true }
 rcgen = "0.13"
+metrics-util = "0.19"
 
 [lints]
 workspace = true

@@ -22,3 +22,7 @@ mod stream_01;
 // STREAM-03 — source error preservation after reconnect exhaustion.
 #[path = "issue_554_regressions/stream_03.rs"]
 mod stream_03;
+
+// OBS-01 — failures reported after a stream opens must remain observable.
+#[path = "issue_554_regressions/obs_01.rs"]
+mod obs_01;
