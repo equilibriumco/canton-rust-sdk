@@ -18,3 +18,7 @@ mod ledger_01;
 // STREAM-01 — checkpoint update recovery.
 #[path = "issue_554_regressions/stream_01.rs"]
 mod stream_01;
+
+// STREAM-03 — source error preservation after reconnect exhaustion.
+#[path = "issue_554_regressions/stream_03.rs"]
+mod stream_03;
